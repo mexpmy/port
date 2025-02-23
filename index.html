@@ -9,6 +9,172 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@500&display=swap" rel="stylesheet">
+    <style>
+        /* Add your custom styles here */
+
+        /* General styles */
+        body {
+            font-family: 'Geologica', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        .header-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left-header, .right-header {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .name {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .btn-con {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .main-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .main-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .left-about, .right-about {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .about-item {
+            margin-bottom: 20px;
+        }
+
+        .abt-text {
+            text-align: center;
+        }
+
+        .large-text {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .small-text {
+            font-size: 1rem;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .control {
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .control i {
+            font-size: 1.5rem;
+        }
+
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #000;
+        }
+
+        .social-icons a:hover {
+            color: #007bff;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 1200px) {
+            .name {
+                font-size: 1.75rem;
+            }
+
+            .large-text {
+                font-size: 1.75rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-container {
+                flex-direction: column;
+            }
+
+            .left-about, .right-about {
+                flex: 1 1 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .name {
+                font-size: 1.5rem;
+            }
+
+            .large-text {
+                font-size: 1.5rem;
+            }
+
+            .main-btn {
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .name {
+                font-size: 1.25rem;
+            }
+
+            .large-text {
+                font-size: 1.25rem;
+            }
+
+            .main-btn {
+                padding: 6px 12px;
+            }
+        }
+    </style>
 </head>
 <body class="main-content">
     <header class="section header active" id="home">
@@ -35,6 +201,9 @@
             </div>
         </div>
     </header>
+
+    <div id="root"></div>
+    
     <main>
         <section class="section about" id="about">
             <div class="main-title">
@@ -138,5 +307,4 @@
 
     <script src="app.js"></script>
 </body>
-
 </html>
