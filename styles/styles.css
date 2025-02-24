@@ -298,19 +298,19 @@ footer {
 }
 
 .main-btn {
-  
-    display: inline-flex; /* Use flexbox for layout */
-    align-items: center; /* Center vertically */
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
-    border-radius: 50px; /* Make it a long, rounded rectangle */
-    padding: 10px 20px; /* Add padding */
-    overflow: hidden; /* Hide overflow from the icon circle */
-  }
-  
+  display: inline-flex;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50px;
+  padding: 10px 20px;
+  overflow: hidden;
+  position: relative; /* Add this! */
+}
+
 .main-btn .btn-text {
-  font-size: 18px; /* Adjust font size */
-  margin-right: 15px; /* Add space between text and icon */
+  font-size: 18px;
+  margin-right: 15px;
 }
 
 .main-btn .btn-icon {
@@ -319,23 +319,27 @@ footer {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  padding: 1rem;
+  padding: 0.8rem; /* Reduced padding */
+  width: 2.5rem; /* Added fixed width */
+  height: 2.5rem; /* Added fixed height */
 }
+
 .main-btn::before {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
-  transform: translateX(100%);
+  width: 0; /* Start with no width */
+  height: 100%;
+  background-color: var(--color-secondary);
   transition: all 0.4s ease-out;
   z-index: -1;
 }
+
 .main-btn:hover::before {
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-secondary);
-  transform: translateX(0);
+  width: 100%; /* Expand to full width on hover */
 }
+
 
 .main-title {
   text-align: center;
