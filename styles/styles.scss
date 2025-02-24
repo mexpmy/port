@@ -20,7 +20,6 @@
     --br-sm-2: 14px;
     --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
 }
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 $container-max-widths: (
   sm: 500px,
@@ -381,13 +380,6 @@ footer {
 
 .main-title h2 span {
     color: var(--color-secondary);
-}
-
-/* Optional: Media query for smaller screens */
-@media (max-width: 768px) {
-    .main-title h2 {
-        font-size: 3rem; /* Adjust heading size */
-    }
 }
 
 
