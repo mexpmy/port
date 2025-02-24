@@ -20,6 +20,26 @@
     --br-sm-2: 14px;
     --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
 }
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+$container-max-widths: (
+  sm: 500px,
+  md: 700px,
+  lg: 900px,
+);
+
+@each $breakpoint,
+$container-max-width in $container-max-widths {
+  .container-#{$breakpoint} {
+    @extend .container-fluid;
+  }
+
+  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+    %responsive-container-#{$breakpoint} {
+      max-width: $container-max-width;
+    }
+  }
+}
 
 body {
     display: flex; /* Enable flexbox for vertical alignment */
